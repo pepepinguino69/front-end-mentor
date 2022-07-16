@@ -10,7 +10,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    :root{
+:root{
         --white: hsl(0, 0%, 100%);
         --gray: hsl(212, 45%, 89%);
         --Gblue: hsl(220, 15%, 55%);
@@ -19,33 +19,33 @@
     }
 p{  
   font-size: 15px;
-  margin-right: 18px;
-  margin-left: 18px;
+  margin:0% 16%;
   text-align: center;
-  padding-top: 10px;}
+  padding-top: 10px;
+  color: var(--Gblue);
+}
 
 body{
   font-family: 'Outfit', sans-serif;
   background-color: var(--gray);
-  width:90vw;
+
   color: var(--Dblue );
- 
- 
- 
-
 }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
-
-    .flex{
+img{border-radius: 10px;}
+.flex{
       display:flex;
       justify-content: space-around;
       align-content: center;
     }
-    .card{
-      width:280px;
-      height: 440px;
+    
+.card{
+      
+      width:375px;
+      height: 530px;
       background-color: var(--white);
       border-radius: 15px;
       border-style: solid;
@@ -53,22 +53,25 @@ body{
       border-color: var(--white)}
     
       h1{
-      font-size: 120%;
+      font-size: 140%;
       text-align: center;
-      margin-left: 20px;
-      margin-right: 20px;
-      padding-top: 10px;}
+      margin:2% 14%;
+    
+    }
 
     .imgholder{
-      height:260px;
-      padding-top: 10px;
+      height:66%;
+      width: auto;
+      padding: 4% 0%;
+    
+    
     }
 
     .container
     {display:flex;
-      height: 90vh;
       justify-content: center;
-      align-items: center;}
+      align-content: center;
+    padding-top: 2%;}
   </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,6 +83,9 @@ body{
 </head>
 <body>
   <div class="container">
+    
+    
+    
     <div class="card">
       <div class="imgholder flex">
         <img src="images/image-qr-code.png" alt="qrcode">
@@ -90,15 +96,13 @@ body{
       <p>
         Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
       </p>
+      </div>
+    </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Ariel Rubel</a>.
+      </div>
+    
  
- 
-
-  
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Ariel Rubel</a>.
-  </div></div></div>
 </body>
 </html>
