@@ -38,7 +38,7 @@
     .card{display:flex;width:600px;border:1px solid var(--Cream);border-radius: 10px;}
     .card1{justify-content:flex-end;}
     .card2{justify-content: flex-start;width:100%;background-color: var(--White);border-bottom-right-radius: 10px;border-top-right-radius: 10px;}
-    .description{padding-right:22px;margin:2% 10%;font-family: 'Monserrat',sans-serif;color:var(--Darkgrayishblue);font-size: 15px;line-height: 1.3rem;text-align: left;}
+    .description{padding-right:22px;margin:2% 10%;font-family: 'Monserrat',sans-serif;;color:var(--Darkgrayishblue);font-size: 15px;line-height: 1.3rem;text-align: left;}
     .wrapper{width:100%;border-top-left-radius: 10px;border-bottom-left-radius: 10px;}
     h4{margin:10%;padding-bottom: 1rem;
       color:var(--Darkgrayishblue);font-weight: 100;font-size: 12px;letter-spacing: .4rem;
@@ -59,7 +59,7 @@
     .price-container{display: flex;justify-content: space-around;align-items: center;}
     .oldprice{text-decoration: line-through;color:var(--Darkgrayishblue)}
     .price{color:var(--Darkcyan);font-family: 'Fraunces', serif;font-size: 200%;}
-    @media screen (max-width:375px){.card{flex-direction:column}}
+    @media only screen and (max-width:375px){.card{flex-direction:column;max-width: 375px;};body{background-color: violet;}}
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,6 +106,5 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Ariel Rubel</a>.
   </div>
-  <img src="design/desktop-design.jpg" alt="">
 </body>
 </html>
