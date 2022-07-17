@@ -32,7 +32,49 @@ body{
 --VeryDarkBlue: hsl(216, 12%, 8%);
 background-color: var(--VeryDarkBlue);
 }
-p{font-size:15px;color: var(--LightGrey);margin:0 10%;text-align: left;}
+
+h2{text-align: left;
+  padding-bottom: 1rem;
+  
+  color:var(--White);
+  margin-left:5%;
+}
+
+
+p{font-size:15px;color: var(--LightGrey);margin:0% 5% 0%;text-align: left;line-height: 150%;font-size: .8;}
+
+ul{display:flex;margin:0 5%;
+  justify-content: space-around;
+  align-content: center;}
+
+li{list-style-type: none;}
+
+input[type="submit"]{
+  background-color: var(--Orange);
+  width:21rem;
+  height: 3rem;
+  border-radius: 25px;
+  color:var(--White);
+  font-size: 15px;
+  margin:2rem 0
+}
+
+input[type="submit"]:hover{
+  font-size: 150%;
+  cursor: pointer;}
+
+h3{color:var(--White);text-align: center;padding-bottom: 1rem;font-size: 150%;}
+
+.container{display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;height:100%}
+
+.pthank{text-align: center;}
+
+.round-container{background-color: var(--DarkBlue);
+  padding: 15px;
+  border-radius:50%}
 
   .rate-now{
     display: flex;
@@ -44,111 +86,145 @@ p{font-size:15px;color: var(--LightGrey);margin:0 10%;text-align: left;}
   }
   
   .rate-now input[type="radio"]:checked+label,
-  .Checked+label {
-    
-    
-   
-
-
-    background-color: var(--White);font-size: 150%;color:var(--LightGrey)
+  .Checked+label {           
+    background-color: var(--White);
+    font-size: 150%;
+    color:var(--LightGrey)
   }
 
 
-input[type="submit"]{background-color: var(--Orange);width:20rem;height: 3rem;border-radius: 25px;color:var(--White);font-size: 18px;}
-input[type="submit"]:hover{font-size: 150%;cursor: pointer;}
-
-  h1{text-align: left;
-    padding-bottom: 1rem;
-    
-    color:var(--White);
-    margin-left:10%;
-  }
+.rate-now label {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display:flex;
+  background-color: var(--DarkBlue);
+  color: var(--MediumGrey);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   
-  .rate-now label {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display:flex;
-    background-color: var(--DarkBlue);
-    color: var(--MediumGrey);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-  }
+}
   
-  .rate-now label:hover {
-    background: var(--Orange);
-  }
-.round-container{background-color: var(--DarkBlue);padding: 15px;border-radius:50%}
-li{list-style-type: none;}
-ul{display:flex;margin:0 5%;justify-content: space-around;align-content: center;}
-.container{display:flex;justify-content: space-around;align-content: center;width:100%;height:100%}
+.rate-now label:hover {
+  background: var(--Orange);
+}
+
+.wrapper{width:40%;height:auto;}
+
+.flex{display: flex;justify-content:center;align-items: center;}
+
+
+.column{flex-direction: column;}
 .placement{display:flex;justify-content: left;align-content: center;margin:5%}
 .center{display:flex;justify-content: space-around;align-content: center;}
-.card{width: 375px;
+#card,#card2{width: 375px;
       height: 375px;
       border:3px solid var(--DarkBlue);
       border-radius:20px;
       background-color:var(--VeryDarkBlue);
     }
-    .margin10{margin-top: 1rem;}
+    .margin10{margin: 1rem 0px;}
     .marginleft{margin-left: 2rem;}
 
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    .hidden{display:none}
+    .thankyou{display: flex;justify-content: center;align-items: space-around;flex-direction: column;}
+
+    .result{height:1.5rem;
+      background-color:var(--DarkBlue);
+      color:var(--Orange);
+      margin:1rem 0;
+      border-radius: 25px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width:10rem;
+      font-size: 13px;
+    }
+    .col{color:aqua}
+    @media screen and (max-width:375px){.container{max-width:375px}
+      
+    }
+
+    
+  
     
   </style>
 </head>
 <body>
-<img src="design/desktop-design.jpg" alt="">
+
   <!-- Rating state start -->
 <div class="container">
-  <div class="card">
-     <div class="marginleft">
+ 
+  <div id="card">
+    
       <div class="placement"><img class="round-container" src="images/icon-star.svg"></div>
-    </div>
-    <h1>How did we do?</h1>
+    
+    <h2>How did we do?</h2>
 
     <p>
       Please let us know how we did with your support request. All feedback is appreciated 
       to help us improve our offering!
     </p>
-    <form action="/action_page.php">
+    <form onsubmit="return false;" method="post" name="myForm">
       
       <ul class="rate-now">
         <li>
-          <input type="radio" id="one" name="rating" />
+          <input type="radio" id="one" value="1" name="rating" />
           <label for="one">1</label>
         </li>
         <li>
-          <input type="radio" id="two" name="rating" />
+          <input type="radio" id="two" value="2" name="rating" />
           <label for="two">2</label>
         </li>
         <li>
-          <input type="radio" id="three" name="rating"/>
+          <input type="radio" id="three" value="3" name="rating"/>
           <label for="three">3</label>
         </li>
         <li>
-          <input type="radio" id="four" name="rating" />
+          <input type="radio" id="four" value="4" name="rating" />
           <label for="four">4</label>
         </li>
         <li>
-          <input type="radio" id="five" name="rating" />
+          <input type="radio" id="five" value="5" name="rating" />
           <label for="five">5</label>
         </li>
       </ul>
-      <div class="center margin10">
-      <input type="submit" class="center margin10" value="Submit"/>
+      <div class="center">
+      <input type="submit" name="submit" value="SUBMIT" onclick="validate()"/>
     </div>
   </form>
   </div>
 </div>
+
+
+
+<div class="container">
+<div id="card2" class="hidden column">
+<div class="flex">
+<img class="wrapper" src="images/illustration-thank-you.svg">
+</div>
+
+  <div class="flex margin10">
+  <div class="result" id="result"></div>
+</div>
+
+
+<h3>Thank you!</h3>
+
+
+<p class="pthank">We appreciate you taking the time to give a rating. If you ever need more support, 
+don’t hesitate to get in touch!</p></div>
+</div>
+
 <br>
 <br>
 <br>
-<br>
+<!-- Thank you state end -->
 
 
 
@@ -163,5 +239,7 @@ ul{display:flex;margin:0 5%;justify-content: space-around;align-content: center;
 
 
 
+
+<script src="js/thankyou.js"></script>
 </body>
 </html>
